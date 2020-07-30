@@ -1,27 +1,25 @@
 /**
- * 
+ *
  */
 package com.sap.empexp.pojo;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * @author i319792
  *
  */
 public class Activity {
+
 	@Id
 	public String id;
-	
+
 	private String date;
-	
+
 	private int caloriesBurn;
-	
+
 	private int steps;
-	
+
 	private double distance;
 
 	public String getDate() {
@@ -55,8 +53,5 @@ public class Activity {
 	public void setDistance(double distance) {
 		this.distance = distance;
 	}
-	
-	
-	
 
 }

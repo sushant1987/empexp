@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.sap.empexp.repositiory;
 
@@ -19,7 +19,13 @@ import com.sap.empexp.pojo.Activity;
 @RepositoryRestResource(collectionResourceRel = "activity", path = "activity")
 @CrossOrigin
 public interface ActivityRepositiory extends MongoRepository<Activity, String> {
-	
+
+	/**
+	 * aaaaa .
+	 * 
+	 * @param date
+	 * @return
+	 */
 	List<Activity> findByDate(@Param("date") String date);
-	
+
 }
