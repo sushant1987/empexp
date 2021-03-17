@@ -1,14 +1,14 @@
 
 pipeline {
     agent any
-    
+    environment {
+        MAVEN_HOME = "C:\dev\bin\maven"
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                maven(maven: 'Maven') {
-                    sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                }
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
         
