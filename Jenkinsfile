@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                withMaven(maven: 'Maven') {
+                maven(maven: 'Maven') {
                     sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
             }
