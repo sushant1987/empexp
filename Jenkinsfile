@@ -2,7 +2,7 @@
 pipeline {
     agent any
     environment {
-        MAVEN_HOME = "C:\dev\bin\maven"
+        MAVEN_HOME = "C:\\dev\\bin\\maven"
     }
     stages {
         stage('Build') {
