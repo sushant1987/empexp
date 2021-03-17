@@ -1,8 +1,9 @@
 
 pipeline {
     agent any
-    environment {
-        MAVEN_HOME = "C:\\dev\\bin\\maven"
+    tools {
+        // Install the Maven version configured as "Maven" and add it to the path.
+        maven "Maven"
     }
     stages {
         stage('Build') {
