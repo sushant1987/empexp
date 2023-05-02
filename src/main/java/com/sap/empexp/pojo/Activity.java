@@ -3,16 +3,21 @@
  */
 package com.sap.empexp.pojo;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 /**
  * @author i319792
  *
  */
+@Entity
 public class Activity {
 
 	@Id
-	public String id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Long id;
 
 	private String date;
 
